@@ -7,7 +7,7 @@ $arPages = [
     "about" => [
         "name" => "About",
         "link" => "/Homework_PHP_5/page.php?id=about",
-        "content" => ""
+        "content" => "he Lorem Ipsum Company is a full-service digital marketing agency based in California, specializing in content marketing, social media marketing, and search engine optimization. ... ounded in 2012, The Lorem Ipsum Company develops effective content, SEO and social media strategies for forward thinking companies."
     ],
     "blog" => [
         "name" => "Blog",
@@ -16,7 +16,7 @@ $arPages = [
             "post1" => [
                 "name" => "Made With Love In Toronto",
                 "type" => "News",
-                "content" => ""
+                "content" => "Тут должна быть статья 1"
             ],
             "post2" => [
                 "name" => "Startup News & Emerging Tech",
@@ -26,17 +26,17 @@ $arPages = [
             "post3" => [
                 "name" => "Bitcoin Will Soon Rule The World",
                 "type" => "News",
-                "content" => ""
+                "content" => "Тут должна быть статья 3"
             ],
             "post4" => [
                 "name" => "Wearable Technology On The Rise",
                 "type" => "News",
-                "content" => ""
+                "content" => "Тут должна быть статья 4"
             ],
             "post5" => [
                 "name" => "Learn Web Design In 30 Days!",
                 "type" => "Media",
-                "content" => ""
+                "content" => "Тут должна быть статья 5"
             ]
         ]
     ],
@@ -65,6 +65,8 @@ $arPages["contact"]["content"] = '
         <input type="email" name="email">
         <label for="message">Напишите нам</label>
         <textarea name="message" rows="4"></textarea>
+        <label for="file">Прикрепите файл</label>
+        <input type="file" name="file">
         <button name="sendMessage">Отправить сообщение</button>
     </form>
 ';
