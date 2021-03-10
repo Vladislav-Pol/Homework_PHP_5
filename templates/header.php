@@ -1,5 +1,5 @@
 <?php
-require_once "/var/www/bitrix/Homework_PHP_5/pagesData.php";
+require_once "./pagesData.php";
 ?>
 <!doctype html>
 <html lang="en">

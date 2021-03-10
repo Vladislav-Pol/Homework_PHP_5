@@ -1,7 +1,14 @@
 <?php
-require_once '/var/www/bitrix/Homework_PHP_5/functions.php';
+include_once './functions.php';
+include_once './pagesData.php';
 
-include_once '/var/www/bitrix/Homework_PHP_5/templates/header.php';
+if (isset($_GET["id"]) && $_GET["id"] == "contact" && isset($_REQUEST["sendMessage"]) && validateFormData()) {
+    $arPages["contact"]["content"] = $arPages["contact"]["content_success"];
+    header("refresh:10;url=/Homework_PHP_5/page.php?id=contact");
+}
+
+include_once './templates/header.php';
+
 if(isset($arPages[$_GET["id"]]["content"]) && is_array($arPages[$_GET["id"]]["content"])){
     if(isset($_GET["article"]))
         echo $arPages[$_GET["id"]]["content"][$_GET["article"]]["content"];
@@ -15,8 +22,4 @@ if(isset($arPages[$_GET["id"]]["content"]) && is_array($arPages[$_GET["id"]]["co
 }
 else
     echo isset($arPages[$_GET["id"]]["content"]) ? $arPages[$_GET["id"]]["content"] : "";
-include_once "/var/www/bitrix/Homework_PHP_5/templates/footer.php";
-
-//6. Если значения формы проходят проверку, то должна выполнятся
-//переадресация на страницу успешной отправки с любым благодарственным
-//текстом, а через 10 секунд возвращать посетителя на страницу с контактами.
+include_once "./templates/footer.php";
